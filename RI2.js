@@ -8,12 +8,16 @@ class Cliente {
 
     get nome() { return this._nome; }
     set nome(novoNome) { this._nome = novoNome; }
+    get nomeUpper() { return this._nome.toUpperCase(); }
+    get nomeLower() { return this._nome.toLowerCase(); }
 
     get telefoneCelular() { return this._telefoneCelular; }
     set telefoneCelular(novoTelefoneCelular) { this._telefoneCelular = novoTelefoneCelular; }
 
     get email() { return this._email; }
     set email(novoEmail) { this._email = novoEmail; }
+    get emailUpper() { return this._email.toUpperCase(); }
+    get emailLower() { return this._email.toLowerCase(); }
 
     get endereco() { return this._endereco; }
     set endereco(novoEndereco) { this._endereco = novoEndereco; }
@@ -44,18 +48,23 @@ class Endereco {
         this._estado = estado;
     }
 
-    // Getters
     get rua() { return this._rua; }
     set rua(novaRua) { this._rua = novaRua; }
+    get ruaUpper() { return this._rua.toUpperCase(); }
+    get ruaLower() { return this._rua.toLowerCase(); }
 
     get numero() { return this._numero; }
     set numero(novoNumero) { this._numero = novoNumero; }
 
     get cidade() { return this._cidade; }
     set cidade(novaCidade) { this._cidade = novaCidade; }
+    get cidadeUpper() { return this._cidade.toUpperCase(); }
+    get cidadeLower() { return this._cidade.toLowerCase(); }
 
     get estado() { return this._estado; }
     set estado(novoEstado) { this._estado = novoEstado; }
+    get estadoUpper() { return this._estado.toUpperCase(); }
+    get estadoLower() { return this._estado.toLowerCase(); }
 }
 
 let telefone1 = new TelefoneCelular(12, '91234-5678');
@@ -74,11 +83,10 @@ console.log(cliente1.descricao());
 console.log(cliente2.descricao());
 console.log(cliente3.descricao());
 
-let clientes = [cliente1, cliente2, cliente3]
+let clientes = [cliente2, cliente3, cliente1]
 
 function listarClientesNome(clientes) {
     return clientes.sort((a, b) => a.nome.localeCompare(b.nome))   
 }
 
 console.log(listarClientesNome(clientes));
-
